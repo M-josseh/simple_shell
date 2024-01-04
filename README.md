@@ -63,6 +63,21 @@
 </li>
 
 <li>
-<h4></h4>
+<h4>builtin.c</h4>
+<p><i>The functions in this file: </i></p>
+<ul>
+<li>\_myexit: exits the shell</li>
+<li>\_mycd: changes current working directory of the process</li>
+<li>\_myhelp: shows the help prompt</li>
+</ul>
+<p>This file contains some of the builtin functions of the shell. It handles four of the commands.</p>
 </li>
 
+<li>
+<h4>builtin1.c</h4>
+<p><i>The functions used for this file: </i></p>
+<ul>
+<li>\_myhistory: displays history list, one command by line, and are indexed.</li>
+<li>unset\_alias: sets alias to a string.</li>
+
+</ul>
