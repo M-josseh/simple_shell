@@ -38,4 +38,31 @@
 <li><i>($) $ exit</i></li>
 </ul>
 
+<h2>Files Summary</h2>
+<ol>
+<li>
+<h4>_atoi.c</h4>
+<p><i>The functions under this file and their function.</i></p>
+<ul>
+<li>interactive: Returns true(1) if shell is in interactive mode.</li>
+<li>is\_delim: checks if character is delimiter. <i>SYNTAX:</i>int is\_delim(char c, char *delim)*</li>
+<li>\_isalpha: check for alphabetic character.</li>
+<li>\_atoi: converts string to integer.
+</ul>
+<p>This file performs functions for the interactive shell to ensure it is interactive, and that the arguments to it are parsed in the integer formart.</p>
+<p>The info\_t structure used is to create variables in the global scope that can be used in any file. The <i>info_t</i> opens the integer data <i>readfd</i> a filedescriptor to the shell into the function <i>interactive</i></p>
+<p>The delimiter is looped over untile the condition where the character checked is equal to the delimeter to return true.</p>
+<p>The character is then passed to the \_isalpha function to check whether it is an alphabet or not.</p>
+<p>The strings are converted to integer using the <b>Parsing Algorithm</b>. Simple explanation:</p>
+<ul>
+<li>Iterates through the characters of  a string.</li>
+<li>Converting each character into its numerical.</li>
+<li>Values and combining the values to form the integer representation.</li>
+<li>Handling negative signs and decimal points.</li>
+</ul>
+</li>
+
+<li>
+<h4></h4>
+</li>
 
