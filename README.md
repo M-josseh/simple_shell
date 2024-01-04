@@ -27,25 +27,25 @@
 <li>All the functions compiled with no return errors.</li>
 </ul>
 
-<h4>Testing the Program</h4>
+<h4>TESTING THE PROGRAM</h4>
 <p>To run the program, you are required to first compile it on your Linux terminal: </p>
 <ul>
-<li><i>$ ./hsh</i></li>
-<li><i>($) $ /bin/ls</i></li>
-<li><i>($) $ exit </i> The interactive shell</li>
-<li><i>echo "/bin/ls" | ./hsh</i> The non-interactive shell.</li>
-<li><i>($) $ cat test_ls_2</i></li>
-<li><i>($) $ exit</i></li>
+<li><em>$ ./hsh</em></li>
+<li><em>($) $ /bin/ls</em></li>
+<li><em>($) $ exit </em> # The interactive shell</li>
+<li><em>echo "/bin/ls" | ./hsh</em> # The non-interactive shell.</li>
+<li><em>($) $ cat test_ls_2</em></li>
+<li><em>($) $ exit</em></li>
 </ul>
 
 <h2>Files Summary</h2>
 <ol>
 <li>
 <h4>_atoi.c</h4>
-<p><i>The functions under this file and their function.</i></p>
+<p>The functions under this file and their function.</p>
 <ul>
 <li>interactive: Returns true(1) if shell is in interactive mode.</li>
-<li>is\_delim: checks if character is delimiter. <i>SYNTAX:</i>int is\_delim(char c, char *delim)*</li>
+<li>is_delim: checks if character is delimiter. SYNTAX: int is_delim(char c, char *delim)*</li>
 <li>\_isalpha: check for alphabetic character.</li>
 <li>\_atoi: converts string to integer.
 </ul>
@@ -64,7 +64,7 @@
 
 <li>
 <h4>builtin.c</h4>
-<p><i>The functions in this file: </i></p>
+<p>The functions in this file: </p>
 <ul>
 <li>\_myexit: exits the shell</li>
 <li>\_mycd: changes current working directory of the process</li>
@@ -75,9 +75,50 @@
 
 <li>
 <h4>builtin1.c</h4>
-<p><i>The functions used for this file: </i></p>
+<p>The functions used for this file: </p>
 <ul>
 <li>\_myhistory: displays history list, one command by line, and are indexed.</li>
 <li>unset\_alias: sets alias to a string.</li>
-
+<li>set\_alias: sets alias to a string.</li>
+<li>print\_alias: prints alias string.</li>
+<li>\_myalias: mimics alias shell function builtin.(<i>man alias</i>)</li>
 </ul>
+
+<p>This file handles the above shell commands. on the terminal they are applied as: <i>history, alias</li></p>
+</li>
+
+<li>
+<h4>environ.c</h4>
+<p>The following functions are found in the file, and their brief description: </p>
+<ul>
+<li>_myenv: prints current environment of the shell program.</li>
+<li>_getenv: gets the value of the environ variable.</li>
+<li>_mysetenv: used to initialize the new environment variable or modify existing one.</li>
+<li>_myunseten: used to remove an environment variable.</li>
+<li>populate_env_list - used to populate environment list.</li>
+</ul>
+<p>This shows the characteristics and special features of our current terminal program. Ensure to have compiled the program and run it to test this function for environment by: </p>
+<ul>
+<li><i>env</i> command on the running program to get its environment.</li>
+</ul>
+</li>
+
+<li>
+<h4>errors.c<h4>
+<p>The following functions are found in the <i>errors.c</i> file: </p>
+<ul>
+<li>_eputs: prints an input string.</li>
+<li>_eputchar: writes character 'c' to stderr.</li>
+<li>_putfd: writes the character c to a given file descriptor. </li>
+<li>_putsfd: prints an input string</li>
+</ul>
+<p>This parses errors from the terminal and prints the error message for any command run on the shell terminal.</p>
+</li>
+
+<li>
+<h4>error1.c</h4>
+<ul>
+<li>
+</ul>
+</li>
+</ol>
