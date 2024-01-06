@@ -117,8 +117,91 @@
 
 <li>
 <h4>error1.c</h4>
+<p>This file has functions that together with the _error.c_ file functions handle errors.</p>
+<p>The following functions are found in the file: </p>
 <ul>
-<li>
+<li>\_erratoi: converts a string to and integer. SYNTAX: <em>int _erratoi(char *s)</em> where 's' id the string to convert.</li>
+<li>print\_error: prints error message. SYNTAX: void print\_error(info\_t \*info, char \*estr).
+<ul>
+<li>@info: the parameter & return info struct</li>
+<li>@estr: string containing specified error.</li>
+</ul></li>
+<li>print\_d: prints a decimal number. SYNTAX: <em>int print\_d (int input, int fd);</em>
+<ul>
+<li>@input: the input.</li>
+<li>@fd: the file descriptor to write to.</li>
 </ul>
 </li>
+<li>convert\_number: a clone of itoa. Returns the converted string. SYNTAX: <em>char *convert_number(long int num, int base, int flags);</em>
+<ul>
+<li>@num: number</li>
+<li>@base: base of number.</li>
+<li>@flags: argument flags.</li>
+</ul>
+</li>
+<li>remove\_comments: used to replace first instance of '#' to '\0'. SYNTAX: <em>void remove\_comments(char *buf)</em>
+<ul>
+<li>@buf: address the string to modify.</li>
+</ul></li>
+</li>
+
+<li>
+<h4>exits.c</h4>
+<p>This file has functions that aide the user to exit the shell prompt of our running program.</p>
+<p>The following functions are found in the <em>exits.c</em> file: </p>
+<ul>
+<li>\_strncpy: copies a string. Clone of strncpy function. SYNTAX: <em>char *_strncpy(char *dest, char *src, int n);</em>
+<ul>
+<li>@dest: the destination string to be copied to.</li>
+<li>@src: the source string.</li>
+<li>@n: the amount of characters to be copied.</li>
+</ul></li>
+<li>\_strncat: concatenates two strings. SYNTAX: <em>char *_strncat(char *dest, char *src, int n);</em>
+<ul>
+<li>@dest: Destination string to be copied to.</li>
+<li>@src: Source string.</li>
+<li>@n: number of bytes to copy.</li>
+</ul></li>
+<li>\_strchr: locates a character in a string. SYNTAX: <em>char *_strchr(char *s, char c);</em>
+<ul>
+<li>@s: the string to be parsed.</li>
+<li>@c: character to look for.</li>
+<li>Return: (s) a pointer to the memory area s.</li>
+</ul></li>
+
+<li>
+<h4>getLine.c</h4>
+<p>This function reads input from the user. It clones the getline function.</p>
+<p>The functions in this <em>getLine.c</em> file are: </p>
+<ul>
+<li>input\_buf: buffers chained commands.SYNTAX: <em>ssize_t input_buf(info_t *info, char **buf, size_t *len);</em>
+<ul>
+<li>@info: parameter struct</li>
+<li>@buf: address of buffer.</li>
+<li>@len: address of len var</li>
+<li>Return: bytes read.</li>
+</ul></li>
+<li>get\_input: gets a line minus newline character. SYNTAX: <em>ssize_t get\_input(info_t *info);</em> Returns: read buf</li>
+<li>read\_buf: reads a buffer. SYNTAX: <em>ssize_t read_buf(info_t *info, char *buf, size_t *i);</em>
+<ul>
+<li>@info: parameter struct</li>
+<li>@buf: buffer</li>
+<li>@i: size</li>
+<li>Return: read buffer, r filedescriptor</li>
+</ul></li>
+<li>\_getline: gets the next line to input from STDIN. SYNTAX: <em>int \_getline(info\_t *info, char **ptr, size\_t *length);</em>
+<ul>
+<li>@info: Parameter Struct</li>
+<li>@ptr: address of pointer to buffer, preallocated or NULL</li>
+<li>@length: size of preallocated ptr buffer if not NULL</li>
+<li>Return: s, length of string read from STDIN</li>
+</ul>
+<li>sigintHandler: blocks ctrl-C. SYNTAX: <em>void sigintHandler(__attribute__((unused))int sig_num</em>
+<ul>
+<li>sig\_num: The signal number.</li>
+<li>Return: void</li>
+</ul></li>
+</li>
+
+
 </ol>
