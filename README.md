@@ -130,21 +130,19 @@
 <ul>
 <li>@input: the input.</li>
 <li>@fd: the file descriptor to write to.</li>
-</ul>
-</li>
+</ul></li>
 <li>convert\_number: a clone of itoa. Returns the converted string. SYNTAX: <em>char *convert_number(long int num, int base, int flags);</em>
 <ul>
 <li>@num: number</li>
 <li>@base: base of number.</li>
 <li>@flags: argument flags.</li>
-</ul>
-</li>
+</ul></li>
 <li>remove\_comments: used to replace first instance of '#' to '\0'. SYNTAX: <em>void remove\_comments(char *buf)</em>
 <ul>
 <li>@buf: address the string to modify.</li>
 </ul></li>
 </li>
-</li>
+<!--End of file 6 of my program-->
 
 <li>
 <h4>exits.c</h4>
