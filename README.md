@@ -168,6 +168,7 @@
 <li>@c: character to look for.</li>
 <li>Return: (s) a pointer to the memory area s.</li>
 </ul></li>
+</ul>
 </li>
 
 <li>
@@ -202,6 +203,7 @@
 <li>sig\_num: The signal number.</li>
 <li>Return: void</li>
 </ul></li>
+</ul>
 </li>
 
 
