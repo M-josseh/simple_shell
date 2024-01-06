@@ -141,6 +141,7 @@
 <ul>
 <li>@buf: address the string to modify.</li>
 </ul></li>
+</ul>
 </li>
 <!--End of file 6 of my program-->
 
