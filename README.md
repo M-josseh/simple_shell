@@ -206,5 +206,108 @@
 </ul>
 </li>
 
+<li>
+<h4>getenv.c</h4>
+<p>The <em>getenv.c</em> file contains the following functions that help configure the current working environment for our program: </p>
+<ul>
+<li>get\_environ: returns the sring array copy of our environment. SYNTAX: <em>char **get_environ(info_t *info);</em>
+<ul>
+<li>@info: Parameter struct</li>
+<li>Return: Always 0</li>
+</ul></li>
+<li>\_unsetenv: Remove the environment variable. SYNTAX: <em>int _unsetenv(info_t *info, char *var);</em>
+<ul>
+<li>@info: Parameter structure, maintains constant function prototype</li>
+<li>@var: the string variable environment property.</li>
+<li>ReturnL 1 0n delete, 0 if otherwise</li>
+</ul></li>
+<li>\_setenv: initialize new environment variable, modify existing one. SYNTAX: <em>int _setenv(info_t *info, char *var, char *value);</em>
+<ul>
+<li>@info: Maintains constant prototype for functions.</li>
+<li>@var: the string environment variable property.</li>
+<li>@value: the string environment value.</li>
+<li>Return: Always 0</li>
+</ul></li>
+</ul>
+</li>
+
+<li>
+<h4>getinfo.c<h4>
+<p>The following functions and their description are found in our <em>getinfo.c</em> file: </p>
+<ul>
+<li>clear_info: initializes info_t struct. SYNTAX: <em>void clear_info(info_t *info);</em>
+<p>This function initializes arg, argv, and path to NULL while argc is initialized to 0</p></li>
+<li>set_info: initializes info_t struct. SYNTAX: <em>void set_info(info_t *info, char **av);</em></li>
+<li>free_info: frees info_t struct fields. SYNTAX: <em>void free_info(info_t *info, int all)</em>
+<ul>
+<li>@info: struct address</li>
+<li>@all: true if freeing all fields.</li>
+</ul>
+<p>The info_t struct is initialized, set and modified and memory freed to prevent memory leaks.</p>
+</ul>
+</li>
+
+<li>
+<h4>history.c<h4>
+<p>This program handles history of commands that have been run on the current child process of the shell program.</p>
+<p>The program contains the following functions: </p>
+<ul>
+<li>get_history_file: gets the history file. SYNTAX: <em>char *get_history_file(info_t *info);</em>
+<ul>
+<li>Return: allocated string containing history file.</li>
+</ul></li>
+<li>write_history: creates a file or appends to an existing one. SYNTAX: <em>int write_history(info_t *info);</em>
+<p>The file created by the filedescriptor has read and write permissions for the owner and read only permission for group and global users.</p></li>
+<li>read_history: reads history from file. SYNTAX: <em>int read_history(info_t *info);</em>
+<p>Returns history count on success.</p></li>
+<li>build_history_list: adds entry to history linked list. SYNTAX: <em>int build_history_list(info_t *info, char *buf, int linecount);</em>
+<ul>
+<li>@info: structure containing potential arguments. Maintains constant function prototype.</li>
+<li>@buf: buffer</li>
+<li>@linecount: the history linecount, histcount</li>
+<li>Return: Always 0</li>
+</ul></li>
+<li>renumber_history: renumbers the history linked listafter changes. SYNTAX: <em>int renumber_history(info_t *info)</em> Returns the new histcount</li>
+</ul>
+</li>
+
+<li>
+<h4>lists.c</h4>
+<p>This program handles data structures. Creating lists to be utilized in various parts of the program, including the history.c file.</p>
+<p>The functions in this file are included below for understanding: </p>
+<ul>
+<li>add\_node: adds a node to the start of a list. SYNTAX: <em>list_t *add_node(list_t **head, const char *str, int num);</em>
+<ul>
+<li>@head: address of pointer to head node.</li>
+<li>@str: str field node.</li>
+<li>@num: node index used by history.</li>
+<li>Return: size of list</li>
+</ul></li>
+<li>add\_node\_end: adds a node to the end of the list. SYNTAX: <em>list_t *add_node_end(list_t **head, const char *str, int num);</em>
+<ul>
+<li>@head: address to pointer to head node.</li>
+<li>@str: str field of node</li>
+<li>@num: node index used by history</li>
+<li>Return: size of list.</li>
+</ul></li>
+<li>print\_list\_str: prints only the str element of a list\_t linked list. SYNTAX: <em>size_t print_list_str(const list_t *h);</em>
+<ul>
+<li>@h: pointer to first node.</li>
+<li>Return: size of list.</li>
+</ul></li>
+<li>delete\_node\_at\_index: deletes node at given index. SYNTAX: <em>int delete_node_at_index(list_t **head, unsigned int index);</em>
+<ul>
+<li>@head: address of pointer to first node.</li>
+<li>@index: index of node to delete.</li>
+<li>Return: 1 on success, 0 on failure.</li>
+</ul></li>
+<li>free\_list: frees all nodes of a list. SYNTAX: <em>void free_list(list_t **head_ptr);</em>
+<ul>
+<li>@head\_ptr: address to pointer of head node.</li>
+<li>Return: Nothing</li>
+</ul></li>
+</ul>
+</li>
+
 
 </ol>
