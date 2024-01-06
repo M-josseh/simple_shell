@@ -144,6 +144,7 @@
 <li>@buf: address the string to modify.</li>
 </ul></li>
 </li>
+</li>
 
 <li>
 <h4>exits.c</h4>
@@ -168,6 +169,7 @@
 <li>@c: character to look for.</li>
 <li>Return: (s) a pointer to the memory area s.</li>
 </ul></li>
+</li>
 
 <li>
 <h4>getLine.c</h4>
