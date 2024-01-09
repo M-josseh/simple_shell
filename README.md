@@ -309,5 +309,97 @@
 </ul>
 </li>
 
+<li>
+<h4>lists1.h</h4>
+<p>The following functions r=are used in the file: </p>
+<ul>
+<li>list\_len: determines length of linked list. SYNTAX: <em>size_t list_len(const list_t *h);</em>
+<ul>
+<li>@h: pointer to first node.</li>
+<li>Return: size of list.</li>
+</ul></li>
+<li>list\_to\_strings: returns an array of strings to the list-\>str. SYNTAX: <em>char **list_to_strings(list_t *head);</em>
+<ul>
+<li>@head: pointer to first node</li>
+<li>Return: array of strings</li>
+</ul></li>
+<li>print\_list: prints all elements of a list\_t linked list. SYNTAX: <em>size_t print_list(const list_t *h);</em>
+<ul>
+<li>Return: length of list</li>
+</ul></li>
+<li>node\_start\_with: returns node whose string starts with prefix. SYNTAX: <em>list_t *node_start_with(list_t *node, char *prefix, char c);</em>
+<ul>
+<li>@node: pointer to list head.</li>
+<li>@prefix: string to match</li>
+<li>@c: the next character after the prefix to match.</li>
+<li>Return: match node or null</li>
+</ul></li>
+<li>get\_node\_index: gets index of node. SYNTAX: <em>ssize_t get_node_index(list_t *head, list_t *node);</em>
+<ul>
+<li>@head: pointer to list head.</li>
+<li>@node: pointer to the node.</li>
+<li>Return: index of node or -1</li>
+</ul></li>
+</ul>
+</li>
+
+<li>
+<h4>parser.c</h4>
+<p>This file had functions which help the terminal to parse data.</p>
+<p>The functions under this file include: </p>
+<ul>
+<li>is\_cmd: determines if a file is an executable command. SYNTAX: <em>int is_cmd(info_t *info, char *path);</em>
+<ul>
+<li>@info: the info struct</li>
+<li>@path: path to the file.</li>
+<li>Return: 1 if true, 0 if otherwise</li>
+</ul></li>
+<li>dup\_chars: duplicates characters. SYNTAX: <em>char *dup_chars(char *pathstr, int start, int stop);</em>
+<ul>
+<li>@pathstr: the PATH string</li>
+<li>@start: starting index</li>
+<li>@stop: stopping index</li>
+<li>Return: pointer to a new buffer</li>
+</ul></li>
+<li>find\_path: finds this cmd in the PATH string. SYNTAX: <em>char *find_path(info_t *info, char *pathstr, char *cmd);</em>
+<ul>
+<li>@info: the info struct</li>
+<li>@pathstr: the PATH string</li>
+<li>@cmd: command to find</li>
+<li>Return: full path of cmd if found or NULL</li>
+</ul></li>
+</ul>
+</li>
+
+<li>
+<h4>realloc.c</h4>
+<p>The memory is reallocated through calling the <em>_realloc</em> function. Among othe functions in this file are: </p>
+<ul>
+<li>@\_memset: fills memory with a constant byte. SYNTAX: <em>char *_memset(char *s, char b, unsigned int n);</em>
+<ul>
+<li>@s: the pointer to the memory area</li>
+<li>@b: the byte to fill *s* with.</li>
+<li>@n: the amount of bytes to be filled</li>
+<li>Return: (s) a pointer to the memory area s</li>
+</ul></li>
+<li>ffree: frees a string of strings. SYNTAX: <em>void ffree(char **pp);</em>
+<ul>
+<li>@pp: string of strings</li>
+<li>Return: Nothing</li>
+</ul></li>
+<li>\_realloc: reallocates a block of memory. SYNTAX: <em>void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);</em>
+<ul>
+<li>@ptr: pointer to previous allocated block of memory</li>
+<li>@old\_size: byte size of previous block</li>
+<li>@new\_size: byte size of new block</li>
+<li>Return: Pointer to the new block of memory allocated</li>
+</ul></li>
+</ul> 
+</li>
+
+<li>
+<h4>shell_loop.c</h4>
+
+</li>
 
 </ol>
